@@ -1,0 +1,144 @@
+@charset "utf-8";
+/* CSS Document */
+
+/****************************************
+
+          Setting
+
+*****************************************/
+
+*{
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+
+body{
+	background-color: #ffffff;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	color:#383C3C;
+	border-top-width: 7px;
+	border-top-style: solid;
+	border-top-color: #383C3C;
+}
+
+div, span, h1, h2, h3, h4, h5, h6, p,a,
+img, dl, dt, dd, ol, ul, li, table, tr, th, td{
+	font-weight: normal;
+	font-style: normal;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+
+img {
+	border: 0;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/****************************************
+
+          wrapper
+
+*****************************************/
+
+#wrapper{
+	width: 700px;
+	margin: 0 auto;
+}
+
+/****************************************
+
+          header
+
+*****************************************/
+
+#header{
+	margin-top:123px;
+	overflow:hidden;
+}
+
+	#header h1{
+		text-align:center;
+		margin-bottom:20px;
+	}
+
+	#header ul{
+		margin-right:auto;
+		margin-left:auto;
+		width:305px;
+	}
+
+	#header li{
+		float:left;
+	}
+
+	#header .li_center{
+		padding-left:36px;
+		padding-right:37px;
+	}
+
+/****************************************
+
+          image
+
+*****************************************/
+
+#image{
+	margin-top:59px;
+}
+
+/****************************************
+
+          content
+
+*****************************************/
+
+#content{
+	margin-top:55px;
+	font-size:13px;
+}
+
+	#content h2{
+		text-align:center;
+		padding-bottom:11px;
+	}
+
+	#content p{
+		line-height:22px;
+		padding-top:22px;
+	}
+
+	#content ul{
+		padding-top:60px;
+	}
+
+		#content li{
+			padding-bottom:11px;
+		}
+
+/****************************************
+
+          footer
+
+*****************************************/
+
+#footer{
+	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size:12px;
+	letter-spacing:1.5px;
+	padding-bottom:40px;
+	margin-top:60px;
+}
+
+	#footer p{
+		text-align:center;
+	}
