@@ -1,0 +1,23 @@
+@charset "utf-8";
+/* CSS Document */
+
+/****************************************
+
+          content
+
+*****************************************/
+
+#content #photo{
+	overflow:hidden;
+}
+
+#content #photo li{
+	float:left;
+	margin-bottom:10px;
+}
+
+#content #photo .r20{
+	margin-right:20px;
+}
+
+
