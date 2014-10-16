@@ -35,7 +35,7 @@ img {
 	border: 0;
 }
 
-ol, ul {
+ol, ul, li {
 	list-style: none;
 }
 
@@ -112,7 +112,7 @@ table {
 		padding-bottom:11px;
 	}
 
-	#content p{
+	#content .bun1{
 		line-height:22px;
 		padding-top:22px;
 	}
