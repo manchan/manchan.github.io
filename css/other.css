@@ -60,6 +60,20 @@
 			padding-top:12px;
 		}
 
+		#content #portfolio a{
+			text-decoration:underline;
+			color:#383C3C;
+		}
+
+		#content #portfolio a:hover{
+			text-decoration:none;
+			color:#39AA81;
+		}
+
 .sitaspace{
 	margin-bottom:20px;
+}
+
+.uespace{
+	margin-top:15px;
 }
