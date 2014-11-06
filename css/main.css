@@ -7,44 +7,86 @@
 
 *****************************************/
 
-*{
-	margin: 0;
-	padding: 0;
-	font-size: 100%;
-	vertical-align: baseline;
+
+/*要素のフォントサイズやマージン・パディングをリセットしています*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
 }
 
-body{
-	background-color: #ffffff;
-	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-	color:#383C3C;
-	border-top-width: 7px;
-	border-top-style: solid;
-	border-top-color: #383C3C;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-
+/*行の高さをフォントサイズと同じにしています*/
+body {
+    line-height:1;
+    color:#383C3C;
+    border-top-width: 6px;
+    border-top-style: solid;
+    border-top-color: #383C3C;
+    font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
 
-div, span, h1, h2, h3, h4, h5, h6, p,a,
-img, dl, dt, dd, ol, ul, li, table, tr, th, td{
-	font-weight: normal;
-	font-style: normal;
-	font-size: 100%;
-	vertical-align: baseline;
+/*新規追加要素のデフォルトはすべてインライン要素になっているので、
+section要素などをブロック要素へ変更しています*/
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+ol, ul{
+    list-style:none;
 }
 
 img {
-	border: 0;
+    vertical-align: top;
+    font-size:0;
+    line-height: 0;
 }
 
-ol, ul, li {
-	list-style: none;
+a {
+    color:#383C3C;
+    text-decoration:none;
 }
 
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+a:hover{
+    color:#39AA81;
+}
+
+
+/****************************************
+
+          font
+
+*****************************************/
+
+@font-face {
+    font-family: 'yuichi';
+    src:url('../font/majallab.woff') format('woff'), /* Modern Browsers */
+    url('../font/majallab.TTF') format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+    font-family: 'better';
+    src:url('../font/OratorStd.woff') format('woff'), /* Modern Browsers */
+    url('../font/OratorStd.otf') format('truetype'); /* Safari, Android, iOS */
+}
+
+.base_size{
+    font-size:13px;
 }
 
 /****************************************
@@ -54,8 +96,8 @@ table {
 *****************************************/
 
 #wrapper{
-	width: 700px;
-	margin: 0 auto;
+    width: 700px;
+    margin: 0 auto;
 }
 
 /****************************************
@@ -64,30 +106,34 @@ table {
 
 *****************************************/
 
-#header{
-	margin-top:123px;
-	overflow:hidden;
+header{
+    margin-top:100px;
 }
 
-	#header h1{
-		text-align:center;
-		margin-bottom:20px;
-	}
+header h1{
+    font-family:'yuichi';
+    font-size:61px;
+    font-weight:bold;
+    text-align:center;
+}
 
-	#header ul{
-		margin-right:auto;
-		margin-left:auto;
-		width:305px;
-	}
+header ul{
+    margin-left:auto;
+    margin-right:auto;
+    width:300px;
+}
 
-	#header li{
-		float:left;
-	}
+header ul li{
+    float:left;
+    font-family:'better';
+    font-size:25px;
+    letter-spacing: -0.1em;
+}
 
-	#header .li_center{
-		padding-left:36px;
-		padding-right:37px;
-	}
+header ul .center{
+    padding-left:25px;
+    padding-right:25px;
+}
 
 /****************************************
 
@@ -96,7 +142,44 @@ table {
 *****************************************/
 
 #image{
-	margin-top:59px;
+    margin-top:65px;
+}
+
+/****************************************
+
+          article
+
+*****************************************/
+
+article{
+    margin-top:45px;
+}
+
+article .box1{
+}
+
+article .box2{
+    margin-top:15px;
+}
+
+article .box1 h2{
+    font-family:'better';
+    letter-spacing: -0.1em;
+    font-size:26px;
+    text-align:center;
+    margin-bottom:32px;
+}
+
+article .box1 p{
+    line-height:22px;
+    padding-bottom:15px;
+}
+
+article .box2 ul li{
+    font-family:'better';
+    font-size:22px;
+    letter-spacing: -0.1em;
+    padding-bottom:8px;
 }
 
 /****************************************
@@ -106,27 +189,27 @@ table {
 *****************************************/
 
 #content{
-	margin-top:55px;
-	font-size:13px;
+    margin-top:55px;
+    font-size:13px;
 }
 
-	#content h2{
-		text-align:center;
-		padding-bottom:11px;
-	}
+#content h2{
+    text-align:center;
+    padding-bottom:11px;
+}
 
-	#content .bun1{
-		line-height:22px;
-		padding-top:22px;
-	}
+#content .bun1{
+    line-height:22px;
+    padding-top:22px;
+}
 
-	#content ul{
-		padding-top:60px;
-	}
+#content ul{
+    padding-top:60px;
+}
 
-		#content li{
-			padding-bottom:11px;
-		}
+#content li{
+    padding-bottom:11px;
+}
 
 
 /****************************************
@@ -134,11 +217,6 @@ table {
   turnbox
 
 *****************************************/
-
-.example {
-    margin: 0px auto;
-    line-height: 4.2;
-}
 
 .turnBoxButton {
     display: block;
@@ -174,8 +252,8 @@ table {
     margin-top: 30px;
     line-height: 2.7;
     position: relative;
-    padding-bottom: 300px;
-    /*height: 40px;*/
+    padding-bottom: 220px;
+    height: 80px;
 }
 
 .language-wrap {
@@ -193,8 +271,6 @@ language-wrap
 .language .jp {
     float: left;
 }
-
-
 
 .language .turnBoxButton {
     position: relative;
@@ -244,14 +320,13 @@ language-wrap
 
 *****************************************/
 
-#footer{
-	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
-	font-size:12px;
-	letter-spacing:1.5px;
-	padding-bottom:40px;
-	margin-top:60px;
+footer{
+    margin-top:45px;
+    font-family: "Palatino Linotype","Book Antiqua",Palatino,serif;
+    letter-spacing:1.5px;
+    font-size:12px;
 }
 
-	#footer p{
-		text-align:center;
-	}
+footer p{
+    text-align:center;
+}
