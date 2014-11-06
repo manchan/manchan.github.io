@@ -21,6 +21,9 @@ body{
 	border-top-width: 7px;
 	border-top-style: solid;
 	border-top-color: #383C3C;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
 }
 
 div, span, h1, h2, h3, h4, h5, h6, p,a,
@@ -124,6 +127,116 @@ table {
 		#content li{
 			padding-bottom:11px;
 		}
+
+
+/****************************************
+
+  turnbox
+
+*****************************************/
+
+.example {
+    margin: 0px auto;
+    line-height: 4.2;
+}
+
+.turnBoxButton {
+    display: block;
+    text-align: center;
+    cursor: pointer;
+}
+
+.turnBoxFaceNum1 {
+    background-color: #101010;
+}
+
+.turnBoxCurrentFace1 > .turnBoxFaceNum1 {
+    background-color: #2a2a2a;
+}
+
+.turnBoxCurrentFace1 > .turnBoxFaceNum1:hover {
+    background-color: #222222;
+}
+
+.turnBoxFaceNum2 {
+    background-color: #0087b7;
+}
+
+.turnBoxCurrentFace2 > .turnBoxFaceNum2 {
+    background-color: #00adea;
+}
+
+.turnBoxCurrentFace2 > .turnBoxFaceNum2:hover {
+    background-color: #00a2db;
+}
+
+.description {
+    margin-top: 30px;
+    line-height: 2.7;
+    position: relative;
+    padding-bottom: 300px;
+    /*height: 40px;*/
+}
+
+.language-wrap {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+language-wrap
+.language {
+    display: inline-block;
+}
+.language img {
+    width: 40px;
+}
+.language .jp {
+    float: left;
+}
+
+
+
+.language .turnBoxButton {
+    position: relative;
+    height: 100%;
+}
+.language .turnBoxButton:after {
+    -webkit-transition: 200ms;
+    -moz-transition: 200ms;
+    -ms-transition: 200ms;
+    -o-transition: 200ms;
+    transition: 200ms;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.4;
+}
+
+.language.turnBoxCurrentFace2 > .turnBoxFaceNum2 .turnBoxButton:after {
+    opacity: 0;
+}
+
+.text {
+    position: absolute;
+    -webkit-transition: 150ms ease-in-out;
+    -moz-transition: 150ms ease-in-out;
+    -ms-transition: 150ms ease-in-out;
+    -o-transition: 150ms ease-in-out;
+    transition: 150ms ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.show {
+    opacity: 1;
+}
+
 
 /****************************************
 
