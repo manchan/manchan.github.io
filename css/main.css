@@ -321,12 +321,24 @@ language-wrap
 *****************************************/
 
 footer{
-    margin-top:45px;
     font-family: "Palatino Linotype","Book Antiqua",Palatino,serif;
     letter-spacing:1.5px;
     font-size:12px;
+    padding-bottom:40px;
+    margin-top:60px;
 }
 
 footer p{
     text-align:center;
+}
+
+/* emoji */
+.box2 ul li {
+    position: relative;
+    cursor: pointer;
+}
+
+.box2 ul li img {
+    position: relative;
+    top: -1px;
 }

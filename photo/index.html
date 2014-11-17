@@ -34,14 +34,14 @@
 
         <div id="photo">
             <ul>
-                <li class="r20"><a href="images/08_b.jpg" class="group" rel="group_name1"><img src="images/08.jpg" alt="08"></a></li>
-                <li><a href="images/07_b.jpg" class="group" rel="group_name1"><img src="images/07.jpg" alt="07"></a></li>
-                <li class="r20"><a href="images/06_b.jpg" class="group" rel="group_name1"><img src="images/06.jpg" alt="06"></a></li>
-                <li><a href="images/05_b.jpg" class="group" rel="group_name1"><img src="images/05.jpg" alt="05"></a></li>
-                <li class="r20"><a href="images/04_b.jpg" class="group" rel="group_name1"><img src="images/04.jpg" alt="04"></a></li>
-                <li><a href="images/03_b.jpg" class="group" rel="group_name1"><img src="images/03.jpg" alt="03"></a></li>
-                <li class="r20"><a href="images/02_b.jpg" class="group" rel="group_name1"><img src="images/02.jpg" alt="02"></a></li>
-                <li><a href="images/01_b.jpg" class="group" rel="group_name1"><img src="images/01.jpg" alt="01"></a></li>
+                <!--<li class="r20"><a href="images/08_b.jpg" class="group" rel="group_name1"><img src="images/08.jpg" alt="08"></a></li>-->
+                <!--<li><a href="images/07_b.jpg" class="group" rel="group_name1"><img src="images/07.jpg" alt="07"></a></li>-->
+                <!--<li class="r20"><a href="images/06_b.jpg" class="group" rel="group_name1"><img src="images/06.jpg" alt="06"></a></li>-->
+                <!--<li><a href="images/05_b.jpg" class="group" rel="group_name1"><img src="images/05.jpg" alt="05"></a></li>-->
+                <!--<li class="r20"><a href="images/04_b.jpg" class="group" rel="group_name1"><img src="images/04.jpg" alt="04"></a></li>-->
+                <!--<li><a href="images/03_b.jpg" class="group" rel="group_name1"><img src="images/03.jpg" alt="03"></a></li>-->
+                <!--<li class="r20"><a href="images/02_b.jpg" class="group" rel="group_name1"><img src="images/02.jpg" alt="02"></a></li>-->
+                <!--<li><a href="images/01_b.jpg" class="group" rel="group_name1"><img src="images/01.jpg" alt="01"></a></li>-->
             </ul>
         </div><!-- /photo -->
 
@@ -62,6 +62,32 @@
 <script type="text/javascript">
     $(document).ready(function() {
 
+        var url = "http://insta-auth.appspot.com/self.php";
+        var photos = "";
+
+        getMyInsta(url).done(function(data){
+
+            $.each(data.data, function(v,i){
+
+                photos += '<li class="r20"><a target="_blank" href="' +
+                        i.link +
+                        '" class="group" rel="' +
+                        'group_name1' +
+                        '">' +
+                        '<img src="' +
+                        i.images.standard_resolution.url +
+                        '" alt="' +
+                        '08' +
+                        '"></a></li>';
+            });
+
+            $("#photo ul").html(photos);
+        })
+        .fail(function(){
+                    console.log('reload browser please.')
+                });
+
+
         $("a.group").fancybox({
             'transitionIn'	:	'elastic',
             'transitionOut'	:	'elastic',
@@ -69,8 +95,22 @@
             'speedOut'		:	200,
             'overlayShow'	:	false
         });
-
     });
+
+    function getMyInsta(url){
+
+        var defer = $.Deferred();
+
+        $.ajax({
+            url: url,
+            dataType: 'json',
+            cache: false,
+            success: defer.resolve,
+            error: defer.reject
+        });
+
+        return defer.promise();
+    }
 </script>
 </body>
 </html>

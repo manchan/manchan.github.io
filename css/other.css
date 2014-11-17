@@ -8,75 +8,86 @@
 *****************************************/
 
 #content #photo{
-	overflow:hidden;
+    position: relative;
+    overflow: hidden;
 }
 
-	#content #photo li{
-		float:left;
-		margin-bottom:10px;
-	}
-	
-	#content #photo .r20{
-		margin-right:20px;
-	}
+#content #photo ul{
+    position: relative;
+    left: 50%;
+    float: left;
+}
+
+#content #photo li{
+    position: relative;
+    left: -50%;
+    float: left;
+}
+
+#content #photo .r20{
+    margin-left:20px;
+}
+
+#content #photo li img {
+    width: 320px;
+    height: 320px;
+}
 
 
 #content #portfolio{
-	overflow:hidden;
-	margin-top:20px;
+    overflow:hidden;
+    margin-top:20px;
 }
 
-	#content #portfolio h3{
-		padding-bottom:4px;
-		font-weight:bold;
-		font-size:15px;
-	}
+#content #portfolio h3{
+    padding-bottom:4px;
+    font-weight:bold;
+    font-size:15px;
+}
 
-	#content #portfolio .box1{
-		padding-bottom:20px;
-		overflow:hidden;
-	}
+#content #portfolio .box1{
+    padding-bottom:20px;
+    overflow:hidden;
+}
 
-	#content #portfolio .box1 h4{
-		font-weight:bold;
-		padding-top:8px;
-		padding-bottom:10px;
-	}
+#content #portfolio .box1 h4{
+    font-weight:bold;
+    padding-top:8px;
+    padding-bottom:10px;
+}
 
-		#content #portfolio .box1 .left{
-			float:left;
-			width:330px;
-			border-top-width: 1px;
-			border-top-style: solid;
-			border-top-color: #8D8E8E;
-		}
-		
-		#content #portfolio .box1 .right{
-			float:right;
-			width:330px;
-			border-top-width: 2px;
-			border-top-style: solid;
-			border-top-color: #8D8E8E;
-			padding-top:12px;
-		}
+#content #portfolio .box1 .left{
+    float:left;
+    width:330px;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #8D8E8E;
+}
 
-		#content #portfolio a{
-			text-decoration:underline;
-			color:#383C3C;
-		}
+#content #portfolio .box1 .right{
+    float:right;
+    width:330px;
+    border-top-width: 2px;
+    border-top-style: solid;
+    border-top-color: #8D8E8E;
+    padding-top:12px;
+}
 
-		#content #portfolio a:hover{
-			text-decoration:none;
-			color:#39AA81;
-		}
+#content #portfolio a{
+    text-decoration:underline;
+    color:#383C3C;
+}
+
+#content #portfolio a:hover{
+    text-decoration:none;
+    color:#39AA81;
+}
 
 .sitaspace{
-	margin-bottom:20px;
+    margin-bottom:20px;
 }
 
 .uespace{
-	margin-top:15px;
+    margin-top:15px;
 }
-
-
 
