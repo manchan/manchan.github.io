@@ -121,18 +121,57 @@ header ul{
     margin-left:auto;
     margin-right:auto;
     width:300px;
+
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
 }
+
 
 header ul li{
     float:left;
     font-family:'better';
     font-size:25px;
     letter-spacing: -0.1em;
+    text-transform: uppercase;
 }
 
 header ul .center{
     padding-left:25px;
     padding-right:25px;
+}
+
+ul li a .line {
+    height: 1px;
+    display: block;
+    width: 0;
+    margin: 0 auto 0 auto;
+}
+ul li a:hover .line, ul li .selected .line{
+    width: 98%;
+}
+.line {
+    background: rgb(111,112,112);
+}
+.css3Animate {
+    -webkit-transition: all .3s ease-in-out .001s;
+    transition: all .3s ease-in-out .001s;
+    -moz-transform: all .3s ease-in-out .001s;
 }
 
 /****************************************
