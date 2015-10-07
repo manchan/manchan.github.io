@@ -147,7 +147,7 @@ header ul li{
     float:left;
     font-family:'better';
     font-size:25px;
-    letter-spacing: -0.1em;
+    letter-spacing: -0.15em;
     text-transform: uppercase;
 }
 
@@ -163,7 +163,7 @@ ul li a .line {
     margin: 0 auto 0 auto;
 }
 ul li a:hover .line, ul li .selected .line{
-    width: 150%;
+    width: 100%;
 }
 .line {
     background: rgb(111,112,112);
