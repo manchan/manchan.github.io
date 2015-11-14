@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="ie ie8" lang="en"><![endif]-->
+<!--[if IE 9 ]><html class="ie ie9" lang="en"><![endif]-->
+<!--[if (gte IE 9)|!(IE)]> <!--><html lang="en"><!--<![endif]-->
+	<head> 
+	
+	<meta charset="utf-8" />
+		
+		<title>404: Page not found</title>
+		<meta name="author" content="Michele Mazzucco, hello@michelemazzucco.it">
+		<meta name="description" content="Page not found" />
+
+		<link rel="author" href="https://plus.google.com/u/0/+MicheleMazzucco9/" title="Michele Mazzucco on G+"/>
+		
+		<!-- favicon -->
+		<link rel="shorcut icon" href="favicon.ico" type="favicon">
+
+		<!-- apple icon -->
+		<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-72x72-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-76x76-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-114x114-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-120x120-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-144x144-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-152x152-precomposed.png">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
+		
+		<!-- CSS -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/grid.css">
+		<link rel="stylesheet" href="css/icon.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/animation.css">
+	
+	</head> 
+
+
+	<body>	
+	
+		<div class="page-wrap">
+		<div id="wrapper" class="404">		
+			
+			<header>	
+				<ul>
+					<li class="social">
+						<i class="social-icon open-menu"><span><span></i>
+					</li>	
+
+					<li class="menu" >
+						<a class="menu-icon open-menu"><span></span></a>
+					</li>
+				</ul>	
+
+			</header>	
+	
+			<ul class="menu-hider">
+					<li class="float-right menu-right">
+						<ul>
+							<li><a href="#home">Home</a></li>
+							<li><a href="#about-me">About</a></li>
+							<li><a href="#works">Works</a></li>
+							<li><a href="#contact">Contact</a></li>
+							<li><a class="journal" href="">Journal</a></li>
+						</ul>
+					</li>
+
+					<li class="float-left">
+						<ul>
+							<li><a href="#home"><i class="icon-twitter"></i><span>Twitter</span></a></li>
+							<li><a href="#about-me"><i class="icon-dribbble"></i><span>Dribbble</span></a></li>
+							<li><a class="behance" href="#works"><i class="icon-behance"></i><span>Behance</span></a></li>
+							<li><a href="#contact"><i class="icon-fontawesome-webfont-6"></i><span>Pinterest</span></a></li>
+							<li><a href=""><i class="icon-fontawesome-webfont-4"></i><span>Instagram</span></a></li>
+						</ul>
+					</li>
+			</ul>		
+
+			<!-- home section -->
+			<section id="home" class="page404">
+					<div class="header-group">
+						<h1>404<br></h1>
+						<h2>Page not found.</h2>
+						<a title="homepage michele mazzucco" class="button contact-me" href="/index.html">Return to homepage</a>
+					</div>
+			</section>
+
+		</div>	
+		<!-- wrapper end -->	
+	
+		<section id="sub-footer">
+			<p>&copy; 2014 <span>MICHELE MAZZUCCO</span>&nbsp; - &nbsp;HANDCRAFTED WITH <img src="img/icon/svg/heart.svg"> IN ITALY</p>	
+		</section>
+</div>
+
+	<!-- script -->
+	
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="js/jquery.flexslider-min.js"></script>
+	<script src="js/retina-1.1.0.min.js"></script>
+	<script src="js/jquery.scrollTo.min.js"></script>
+	<script src="js/jquery.nav.js"></script>
+	<script src="js/skrollr.js"></script>
+	<script src="js/script.js"></script>
+
+
+    <!-- Google script -->
+
+    <!-- Gosquared script -->
+	</body>
+</html>

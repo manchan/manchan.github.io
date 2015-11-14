@@ -1,0 +1,383 @@
+@charset "utf-8";
+/* CSS Document */
+
+/****************************************
+
+          Setting
+
+*****************************************/
+
+
+/*要素のフォントサイズやマージン・パディングをリセットしています*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/*行の高さをフォントサイズと同じにしています*/
+body {
+    line-height:1;
+    color:#383C3C;
+    border-top-width: 6px;
+    border-top-style: solid;
+    border-top-color: #383C3C;
+    font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+/*新規追加要素のデフォルトはすべてインライン要素になっているので、
+section要素などをブロック要素へ変更しています*/
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+ol, ul{
+    list-style:none;
+}
+
+img {
+    vertical-align: top;
+    font-size:0;
+    line-height: 0;
+}
+
+a {
+    color:#383C3C;
+    text-decoration:none;
+}
+
+a:hover{
+    color:#39AA81;
+}
+
+
+/****************************************
+
+          font
+
+*****************************************/
+
+@font-face {
+    font-family: 'yuichi';
+    src:url('../font/majallab.woff') format('woff'), /* Modern Browsers */
+    url('../font/majallab.TTF') format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+    font-family: 'better';
+    src:url('../font/OratorStd.woff') format('woff'), /* Modern Browsers */
+    url('../font/OratorStd.otf') format('truetype'); /* Safari, Android, iOS */
+}
+
+.base_size{
+    font-size:13px;
+}
+
+/****************************************
+
+          wrapper
+
+*****************************************/
+
+#wrapper{
+    width: 700px;
+    margin: 0 auto;
+}
+
+/****************************************
+
+          header
+
+*****************************************/
+
+header{
+    margin-top:100px;
+}
+
+header h1{
+    font-family:'yuichi';
+    font-size:61px;
+    font-weight:bold;
+    text-align:center;
+}
+
+header ul{
+    margin-left:auto;
+    margin-right:auto;
+    width:300px;
+
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+}
+
+
+header ul li{
+    float:left;
+    font-family:'better';
+    font-size:25px;
+    letter-spacing: -0.15em;
+    text-transform: uppercase;
+}
+
+header ul .center{
+    padding-left:25px;
+    padding-right:25px;
+}
+
+ul li a .line {
+    height: 1px;
+    display: block;
+    width: 0;
+    margin: 0 auto 0 auto;
+}
+ul li a:hover .line, ul li .selected .line{
+    width: 100%;
+}
+.line {
+    background: rgb(111,112,112);
+}
+.css3Animate {
+    -webkit-transition: all .3s ease-in-out .001s;
+    transition: all .3s ease-in-out .001s;
+    -moz-transform: all .3s ease-in-out .001s;
+}
+
+/****************************************
+
+          image
+
+*****************************************/
+
+#image{
+    margin-top:65px;
+}
+
+/****************************************
+
+          article
+
+*****************************************/
+
+article{
+    margin-top:45px;
+}
+
+article .box1{
+}
+
+article .box2{
+    margin-top:15px;
+}
+
+h2{
+    font-family:'better';
+    letter-spacing: -0.1em;
+    font-size:26px;
+    text-align:center;
+    margin-bottom:32px;
+}
+
+article .box1 p{
+    line-height:22px;
+    padding-bottom:15px;
+}
+
+article .box2 ul li{
+    font-family:'better';
+    font-size:22px;
+    letter-spacing: -0.1em;
+    padding-bottom:8px;
+}
+
+/****************************************
+
+          content
+
+*****************************************/
+
+#content{
+    margin-top:55px;
+    font-size:13px;
+}
+
+#content h2{
+    text-align:center;
+    padding-bottom:11px;
+}
+
+#content .bun1{
+    line-height:22px;
+    padding-top:22px;
+}
+
+#content ul{
+    padding-top:60px;
+}
+
+#content li{
+    padding-bottom:11px;
+}
+
+
+/****************************************
+
+  turnbox
+
+*****************************************/
+
+.turnBoxButton {
+    display: block;
+    text-align: center;
+    cursor: pointer;
+}
+
+.turnBoxFaceNum1 {
+    background-color: #101010;
+}
+
+.turnBoxCurrentFace1 > .turnBoxFaceNum1 {
+    background-color: #2a2a2a;
+}
+
+.turnBoxCurrentFace1 > .turnBoxFaceNum1:hover {
+    background-color: #222222;
+}
+
+.turnBoxFaceNum2 {
+    background-color: #0087b7;
+}
+
+.turnBoxCurrentFace2 > .turnBoxFaceNum2 {
+    background-color: #00adea;
+}
+
+.turnBoxCurrentFace2 > .turnBoxFaceNum2:hover {
+    background-color: #00a2db;
+}
+
+.description {
+    margin-top: 30px;
+    line-height: 2.7;
+    position: relative;
+    padding-bottom: 220px;
+    height: 80px;
+}
+
+.language-wrap {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+language-wrap
+.language {
+    display: inline-block;
+}
+.language img {
+    width: 40px;
+}
+.language .jp {
+    float: left;
+}
+
+.language .turnBoxButton {
+    position: relative;
+    height: 100%;
+}
+.language .turnBoxButton:after {
+    -webkit-transition: 200ms;
+    -moz-transition: 200ms;
+    -ms-transition: 200ms;
+    -o-transition: 200ms;
+    transition: 200ms;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.4;
+}
+
+.language.turnBoxCurrentFace2 > .turnBoxFaceNum2 .turnBoxButton:after {
+    opacity: 0;
+}
+
+.text {
+    position: absolute;
+    -webkit-transition: 150ms ease-in-out;
+    -moz-transition: 150ms ease-in-out;
+    -ms-transition: 150ms ease-in-out;
+    -o-transition: 150ms ease-in-out;
+    transition: 150ms ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.show {
+    opacity: 1;
+}
+
+
+/****************************************
+
+          footer
+
+*****************************************/
+
+footer{
+    font-family: "Palatino Linotype","Book Antiqua",Palatino,serif;
+    letter-spacing:1.5px;
+    font-size:12px;
+    padding-bottom:40px;
+    margin-top:60px;
+}
+
+footer p{
+    text-align:center;
+}
+
+/* emoji */
+.box2 ul li {
+    position: relative;
+    cursor: pointer;
+}
+
+.box2 ul li img {
+    position: relative;
+    top: -1px;
+}
