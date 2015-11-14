@@ -75,6 +75,10 @@ html {
     color: #fff;
 }
 
+.text-jp{
+    font-family: "Hiragino Kaku Gothic ProN",  Meiryo,  sans-serif;
+}
+
 a {
     text-decoration: none;
     color: #707C80;
