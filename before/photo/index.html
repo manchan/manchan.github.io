@@ -111,9 +111,7 @@
         var photos = "";
 
         getMyInsta(url).done(function (data) {
-
             $.each(data.data, function (v, i) {
-
                 photos += '<li class="r20"><a target="_blank" href="' +
                         i.link +
                         '" class="group" rel="' +
@@ -125,13 +123,11 @@
                         '08' +
                         '"></a></li>';
             });
-
             $("#photo ul").html(photos);
-        })
+            })
                 .fail(function () {
                     console.log('reload browser please.')
                 });
-
 
         $("a.group").fancybox({
             'transitionIn': 'elastic',
