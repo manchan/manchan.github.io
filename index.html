@@ -8,7 +8,7 @@
   <title>Yuichi Matsuoka | Web and iOS developer</title>
   <meta name="author" content="Yuichi Matsuoka, anything12new14@gmail.com">
   <meta name="description"
-        content="I’m 27 year old Web and iOS App developer living in Japan, a city in Kyoto Japan. My work is focused principally on web and iOS App Development. This is my personal portfolio and my little journal.">
+        content="">
   <meta name="google-site-verification" content="w6QODQIo6PYp7OLUH3RI1ULc4NKzA0lt7tzXEeKJzjM">
   <link rel="author" href="https://plus.google.com/u/0/105465273071391983597/" title="Yuichi Matsuoka on G+">
 
@@ -322,8 +322,10 @@
           data-2450="-webkit-transform: translateY(0px); opacity:1;" class="skrollable skrollable-after"
           style="-webkit-transform: translateY(0px); opacity: 1;">FAVORITES QUOTES</h2>
       <ul>
-        <li="" data-2300="opacity:0;" data-2600="opacity:1;" class="column col-12 slides skrollable skrollable-after"
-            style="opacity: 1;">
+        <li
+        ="" data-2300="opacity:0;" data-2600="opacity:1;" class="column col-12 slides skrollable skrollable-after"
+        style="opacity: 1
+      ;">
         <li class=""
             style="width: 100%; float: left; margin-right: -100%; position: relative; display: block; z-index: 1; opacity: 0;">
 
@@ -475,7 +477,8 @@
 
 <!-- wrapper end -->
 <section id="sub-footer">
-  <p>© 2015 <span>YUICHI MATSUOKA</span> <strong>&nbsp; - &nbsp;</strong>HANDCRAFTED WITH <img title="love" alt="love"
+  <p>© <script type="text/javascript"> var theDate=new Date(); document.write(theDate.getFullYear());</script>
+    <span>YUICHI MATSUOKA</span> <strong>&nbsp; - &nbsp;</strong>HANDCRAFTED WITH <img title="love" alt="love"
                                                                                                src="./img/heart.svg"> IN
     JAPAN</p>
 </section>
@@ -530,5 +533,23 @@
   _gs('GSN-708819-Q');
 </script>
 
+<!--Meta Description-->
+<script type="text/javascript">
+  function calculateAge(birthday) {
+    var  birth = birthday.split('/');
+    var _birth = parseInt("" + birth[2] + birth[0] + birth[1]);
+    var  today = new Date();
+    var _today = parseInt("" + today.getFullYear() + affixZero(today.getMonth() + 1) + affixZero(today.getDate()));
+    return parseInt((_today - _birth) / 10000);
+  }
+  function affixZero(int) {
+    if (int < 10) int = "0" + int;
+    return "" + int;
+  }
+  var birthday = calculateAge('12/14/1987');
+  $("meta[name='description']").attr("content", "I’m " +
+    birthday +
+    " year old Web and iOS App developer living in Japan, a city in Kyoto Japan. My work is focused principally on web and iOS App Development. This is my personal portfolio and my little journal.");
+</script>
 </body>
 </html>
