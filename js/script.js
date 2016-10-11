@@ -237,10 +237,10 @@ Particle.prototype.collisionDetection = function() {
     this.position.y = this.vy + this.scale;
   }
   // 下
-  else if (this.position.y > canvas.height - this.scale) {
+  else if (this.position.y > ctx.canvas.height - this.scale) {
     this.vy *= -0.6;
     this.vx *= 0.85;
-    this.position.y = canvas.height - this.scale;
+    this.position.y = ctx.canvas.height - this.scale;
   }
   // 左
   else if (this.position.x < 0 - this.scale) {
@@ -248,9 +248,9 @@ Particle.prototype.collisionDetection = function() {
     this.position.x = this.vx + this.scale;
   }
   // 右
-  else if (this.position.x > canvas.width - this.scale) {
+  else if (this.position.x > ctx.canvas.width - this.scale) {
     this.vx *= -0.85;
-    this.position.x = canvas.width - this.vx - this.scale;
+    this.position.x = ctx.canvas.width - this.vx - this.scale;
   }
 };
 
