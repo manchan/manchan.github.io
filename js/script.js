@@ -321,4 +321,7 @@ for (var i=0; i<density; i++) {
   console.log("canvas.height: "+canvas.height);
 }
 
-loop();
+setTimeout( function() {
+  loop();
+}, 2100 );
+
