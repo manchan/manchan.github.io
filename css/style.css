@@ -613,6 +613,13 @@ ul.menu-hider.open {
     overflow: hidden;
 }
 
+#canvas-container {
+	height: 100vh;
+	width: 100vw;
+	background-color: #00BCD4;
+	display: block;
+}
+
 #home .mobile {
     height: 0 !important;
 }
