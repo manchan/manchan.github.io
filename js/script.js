@@ -4,6 +4,27 @@
     $('.spinner').fadeOut(150);
     $('#loader').slideToggle(350);
     $("body").removeClass("preload");
+
+    if ($("html").hasClass("webgl")) {
+//      $("liquid-container").addClass("has-bgImage");
+      window.liquid = {
+        player: {
+          start: function() {},
+          stop: function() {}
+        },
+        play: !1
+      };
+
+      setTimeout(function() {
+        if ("picsLiquid" in window) {
+          window.liquid = {
+            player: new window.picsLiquid,
+            play: 1
+          };
+          liquid.player.start();
+        }
+      }, 0)
+    }
   });
 
   //----------------------------------
@@ -89,7 +110,7 @@
     scrollThreshold: 0.5,
     filter: ':not(.journal)',
     easing: 'swing',
-    touch: true,
+    touch: true
   });
 
   // height viewport
@@ -145,6 +166,8 @@
     return false;
   });
 
+
+
 }(jQuery))
 
 function send(datastr) {
@@ -165,6 +188,7 @@ function send(datastr) {
   });
 }
 
+/*
 window.requestAnimFrame = (function(){
   return  window.requestAnimationFrame   ||
     window.webkitRequestAnimationFrame ||
@@ -305,7 +329,6 @@ var particles = []; //パーティクルをまとめる配列
 // Blue Base2
 var colors = ['#333399', '#3399FF', '#FFFFFF', '#3366CC'];
 
-
 for (var i=0; i<density; i++) {
   var color = colors[~~(Math.random()*4)];
   var scale = ~~(Math.random()*5)+3;
@@ -325,3 +348,4 @@ setTimeout( function() {
   loop();
 }, 2100 );
 
+*/

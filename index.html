@@ -100,7 +100,12 @@
 
 <!-- home section -->
 <section id="home" style="height: 661px;">
-  <canvas id="canvas-container"></canvas>
+
+  <div id="liquid-container">
+    <canvas id="liquid"></canvas>
+    <!--<canvas id="liquid"></canvas>    -->
+  </div>
+
   <div itemscope="" itemtype="http://schema.org/Person">
     <div class="header-group homepage current">
       <h1 class="downBig" itemprop="name">
@@ -487,8 +492,7 @@
 <!-- wrapper end -->
 <section id="sub-footer">
   <p>© <script type="text/javascript"> var theDate=new Date(); document.write(theDate.getFullYear());</script>
-    <span>YUICHI MATSUOKA</span> <strong>&nbsp; - &nbsp;</strong>HANDCRAFTED WITH <img title="love" alt="love"
-                                                                                               src="./img/heart.svg"> IN
+    <span>YUICHI MATSUOKA</span> <strong>&nbsp; - &nbsp;</strong>HANDCRAFTED WITH <img title="love" alt="love" src="./img/heart.svg"> IN
     JAPAN</p>
 </section>
 </div>
@@ -504,7 +508,11 @@
 <script src="./js/jquery.nav.js"></script>
 <script src="./js/skrollr.js"></script>
 <script src="./js/turnBox.js" type="text/javascript"></script>
+
+<script src="./js/head.min.js"></script>
 <script src="./js/script.js"></script>
+<script src="./js/liquid/lib/require.min.js"></script>
+<script src="./js/liquid/src/liquid.min.js"></script>
 
 <!--GA-->
 <script>

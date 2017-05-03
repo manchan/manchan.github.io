@@ -57,7 +57,7 @@ html {
     color: #707C80;
     font-size: 15px;
     font-family: 'Bariol-Regular', serif;
-    background-color: #F6F6F6;
+    /*background-color: #F6F6F6;*/
 
     -webkit-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
@@ -252,7 +252,7 @@ a:hover .line{
 #loader ul.spinner > li {
     width: 15px;
     height: 15px;
-    background-color: #f6f6f6;
+    /*background-color: #f6f6f6;*/
 
     border-radius: 100%;
     display: inline-block;
@@ -395,7 +395,7 @@ header {
     max-width: 1290px;
     padding: 65px 100px;
 
-    background-color: #f6f6f6;
+    /*background-color: #f6f6f6;*/
 
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
@@ -524,7 +524,7 @@ ul.menu-hider {
     padding: 100px 100px 50px 100px;
     width: 100%;
     max-width: 1290px;
-    background-color: #f6f6f6;
+    /*background-color: #f6f6f6;*/
     z-index: -1;
     position: fixed;
     top: 50px;
@@ -616,7 +616,27 @@ ul.menu-hider.open {
 #canvas-container {
 	height: 100vh;
 	width: 100vw;
-	background-color: #00BCD4;
+	/*background-color: #00BCD4;*/
+	display: block;
+}
+
+#liquid-container{
+	height: 100vh;
+	width: 100vw;
+	display: block;
+	/*background-color:#00BCD4*/
+}
+
+#liquid-container.has-bgImage{
+	/*background-position:center center;*/
+	/*background-repeat:no-repeat;background-size:cover*/
+}
+
+#liquid {
+	z-index:0;
+	height: 100vh;
+	width: 100vw;
+	/*background-color: #00BCD4;*/
 	display: block;
 }
 
@@ -629,7 +649,8 @@ ul.menu-hider.open {
 }
 
 #home h1 {
-    color: #fff;
+    /*color: #fff;*/
+		color: #222222;
     letter-spacing: 6px;
     margin-bottom: 15px;
     font-weight: 400;
@@ -639,7 +660,8 @@ ul.menu-hider.open {
     font-size: 18px;
     font-family: 'Bariol-Regular', serif;
     text-transform: none;
-    color: #fff;
+    /*color: #fff;*/
+		color: #222222;
     letter-spacing: 1px;
     margin-bottom: 125px;
 
@@ -1603,7 +1625,7 @@ label.error {
     }
 
     ul.menu-hider {
-        background-color: #f6f6f6;
+        /*background-color: #f6f6f6;*/
         z-index: 900;
         position: fixed;
         position: fixed;
