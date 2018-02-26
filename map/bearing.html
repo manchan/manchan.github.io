@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    html,
+    body,
+    #map-canvas {
+        height: 100%;
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+    }
+</style>
+</head>
+<body>
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false&libraries=geometry&ext=.js"></script>
+<div id="info"></div>
+<div id="map-canvas"></div>
+<script type="text/javascript">
+    var map;
+    var infowindow = new google.maps.InfoWindow();
+
+    function initialize() {
+        // Geolocation API
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+              function(position) {
+                var mapLatLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+                geocoder = new google.maps.Geocoder();
+                var mapOptions = {
+                    zoom: 15,
+                    center: mapLatLng
+                }
+                map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+                point1 = new google.maps.Marker({
+                    map: map,
+                    draggable: true,
+                    position: google.maps.geometry.spherical.computeOffset(map.getCenter(), 0, 80)
+                });
+                google.maps.event.addListener(point1, 'dragend', bisectAngle);
+                point2 = new google.maps.Marker({
+                    map: map,
+                    draggable: true,
+                    position: google.maps.geometry.spherical.computeOffset(map.getCenter(), 800, -58.6)
+                });
+                google.maps.event.addListener(point2, 'dragend', bisectAngle);
+                var poly3 = new google.maps.Polyline({
+                    path: [point1.getPosition(), point2.getPosition()],
+                    map: map
+                });
+                poly3.binder = new MVCArrayBinder(poly3.getPath());
+                point1.bindTo('position', poly3.binder, '0'); //this makes the line bind to point 1
+                point2.bindTo('position', poly3.binder, '1'); //and point 2
+
+                var bounds = new google.maps.LatLngBounds();
+                bounds.extend(point1); 
+                bounds.extend(point2);
+                map.fitBounds(bounds); //zooms in
+          },
+          function(error) {
+            switch(error.code) {
+              case 1:
+                alert("位置情報の利用が許可されていません");
+                break;
+              case 2:
+                alert("現在位置が取得できませんでした");
+                break;
+              case 3:
+                alert("タイムアウトになりました");
+                break;
+              default:
+                alert("その他のエラー(エラーコード:"+error.code+")");
+                break;
+            }
+          }
+        );
+
+      // Geolocation APIに対応していない
+      } else {
+        alert("この端末では位置情報が取得できません");
+      }
+    }
+
+    google.maps.event.addDomListener(window, 'load', initialize);
+    google.maps.event.addDomListener(window, 'load', bisectAngle);
+
+    function bisectAngle() {
+        var head1 = google.maps.geometry.spherical.computeHeading(point1.getPosition(), point2.getPosition());
+        document.getElementById('info').innerHTML = "Bearing is " + head1.toFixed(1) + " or " + (head1 + 90).toFixed(1) + " ";
+    }
+
+    /*
+     * Use bindTo to allow dynamic drag of markers to refresh poly.
+     */
+    function MVCArrayBinder(mvcArray) { //credit to https://stackoverflow.com/a/26663570/2381899
+        this.array_ = mvcArray;
+    }
+    MVCArrayBinder.prototype = new google.maps.MVCObject();
+    MVCArrayBinder.prototype.get = function (key) {
+        if (!isNaN(parseInt(key))) {
+            return this.array_.getAt(parseInt(key));
+        } else {
+            this.array_.get(key);
+        }
+    }
+    MVCArrayBinder.prototype.set = function (key, val) {
+        if (!isNaN(parseInt(key))) {
+            this.array_.setAt(parseInt(key), val);
+        } else {
+            this.array_.set(key, val);
+        }
+    }
+</script>
+</body>
+</html>
